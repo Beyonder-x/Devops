@@ -12,9 +12,9 @@ pipeline {
                '''
             }
         }
-         stage('Build') {
+         stage('Git check') {
             steps {
-                echo 'Building'
+                echo 'Code is directly coming from git'
             }
         }
          stage('Deploy on test') {
