@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Run a command') {
+            steps {
+               sh '''
+               ls 
+               date
+               pwd
+               cal 2021
+               '''
+            }
+        }
+         stage('Build') {
+            steps {
+                echo 'Building'
+            }
+        }
+         stage('Deploy on test') {
+            steps {
+                echo 'Deploying on test'
+            }
+        }
+         stage('Deploy on prod') {
+            steps {
+                echo 'Deploying on production server'
+            }
+        }
+    }
+}
